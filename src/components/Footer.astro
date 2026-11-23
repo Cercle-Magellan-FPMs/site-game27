@@ -2,9 +2,10 @@
 import Facebook from "@icons/Facebook.astro";
 import Instagram from "@icons/Instagram.astro";
 import Mail from "@icons/Mail.astro";
+import { facebookPage } from "../event";
 
 import { Image } from "astro:assets";
-import logo from "@images/Logo_Game26_Mono.svg";
+import logo from "@images/Logo_GAME27_Mono.svg";
 ---
 
 <footer class="z-10 mt-2 bg-indigo-950 text-white" transition:animate="none">
@@ -14,20 +15,10 @@ import logo from "@images/Logo_Game26_Mono.svg";
     <div>
       <h4 class="mb-3 mt-0 font-semibold uppercase">Réseaux sociaux</h4>
       <ul class="flex flex-col gap-2">
-        <!-- TODO : Update quand l'évent Facebook sera sorti  -->
         <li>
           <a
             class="inline-flex items-center gap-2 underline duration-150 hover:translate-x-2 hover:opacity-80"
-            href="https://www.facebook.com/events/827729983350631/"
-          >
-            <span class="size-6 fill-white"><Facebook /></span>
-            Event Facebook Game 26
-          </a>
-        </li>
-        <li>
-          <a
-            class="inline-flex items-center gap-2 underline duration-150 hover:translate-x-2 hover:opacity-80"
-            href="https://www.facebook.com/CercleMagellan"
+            href={facebookPage}
           >
             <span class="size-6 fill-white"><Facebook /></span>
             Cercle Magellan
@@ -59,12 +50,13 @@ import logo from "@images/Logo_Game26_Mono.svg";
       <ul class="flex flex-col gap-2">
         <li>Théau Pauwels</li>
         <li>Auguste Cordier</li>
-        <li>Andréa Paciorkowski</li>
+        <li>Lucien Marchetti</li>
       </ul>
 
       <h4 class="mb-3 mt-8 font-semibold uppercase">DéléGames</h4>
       <ul class="flex flex-col gap-2">
-        <li>Gedeon Delvigne</li>
+        <li>Lutsian Legay</li>
+        <li>Victor Clais</li>
       </ul>
     </div>
     <div class="h-[2px] rounded-full bg-white md:hidden"></div>
@@ -79,7 +71,7 @@ import logo from "@images/Logo_Game26_Mono.svg";
     <Image
       class="size-48 justify-self-center"
       src={logo}
-      alt="Game 26"
+      alt="GAME 27"
       quality={30}
       format="webp"
     />

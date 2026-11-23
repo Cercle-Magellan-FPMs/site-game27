@@ -8,9 +8,10 @@ interface Props {
   image?: ImageMetadata | undefined;
   background?: ImageMetadata | undefined;
   link: string;
+  linkLabel: string;
 }
 
-const { title, description, image, link, background } = Astro.props;
+const { title, description, image, link, linkLabel, background } = Astro.props;
 ---
 
 <div class="rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 p-1">
@@ -21,7 +22,7 @@ const { title, description, image, link, background } = Astro.props;
       <Image
         class="h-48 w-full max-w-[50%] rounded-lg object-contain"
         src={image ? image : Unknown_Image}
-        alt={title}
+        alt=""
         format="webp"
       />
     </div>
@@ -31,18 +32,12 @@ const { title, description, image, link, background } = Astro.props;
         {description}
       </p>
     </div>
-    <div class="z-10 grid grid-cols-2 gap-4">
+    <div class="z-10">
       <a
         href={link}
         class="flex items-center justify-center rounded-lg bg-gradient-to-r from-amber-500 to-orange-500 px-4 py-2 text-center font-semibold text-white transition duration-150 hover:text-indigo-950"
       >
-        Réserve ta place !
-      </a>
-      <a
-        href="https://www.facebook.com/events/827729983350631/"
-        class="flex items-center justify-center rounded-lg border-2 border-orange-500 bg-indigo-950 px-4 py-2 text-center font-semibold text-white transition duration-150 hover:bg-opacity-20 hover:text-opacity-80"
-      >
-        Plus d'infos
+        {linkLabel}
       </a>
     </div>
     {
@@ -51,7 +46,7 @@ const { title, description, image, link, background } = Astro.props;
           <Image
             class="h-full w-full overflow-hidden object-cover opacity-20"
             src={background}
-            alt={title}
+            alt=""
             format="webp"
           />
         </div>

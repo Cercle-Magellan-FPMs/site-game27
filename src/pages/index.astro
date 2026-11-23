@@ -1,26 +1,23 @@
 ---
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
+import { facebookPage } from "../event";
 
 import heroImage from "@images/heroImage.svg";
 import BANNER from "@images/website-banner.png";
-import logo from "@images/Logo_Game26_New_Colors.svg";
+import logo from "@images/Logo_GAME27_Colors.svg";
 import Card from "@components/Card.astro";
 import Sponsors from "@components/Sponsors.astro";
 
 import LOL from "@images/lol.png";
-import ROCKET_LEAGUE from "@images/rocket-league.png";
 import SSBU from "@images/ssbu-white.png";
-import MK8 from "@images/mk8.png";
-import FC26 from "@images/fc26.png";
-import VALO from "@images/valo.png";
+import CS from "@images/cs-logo.png";
+import MC from "@images/mc-logo.png";
 
 import LOL_BACKGROUND from "@images/lol.jpg";
-import ROCKET_LEAGUE_BACKGROUND from "@images/rocket-league.jpg";
 import SSBU_BACKGROUND from "@images/ssbu.jpg";
-import MK8_BACKGROUND from "@images/mk8.jpg";
-import FC26_BACKGROUND from "@images/fc26.jpg";
-import VALO_BACKGROUND from "@images/valo.jpg";
+import CS_BACKGROUND from "@images/cs-background.jpeg";
+import MC_BACKGROUND from "@images/mc-background.jpg";
 
 import Wavenet from "@images/sponsors/wavenet.png";
 import Weloveat from "@images/sponsors/weloveat.png";
@@ -47,32 +44,41 @@ const tournois = [
     image: LOL,
     background: LOL_BACKGROUND,
     description:
-      "Une draft en 5v5 à jusqu'à 12 équipes. Venez montrer vos talents sur la faille de l'invocateur !",
-    link: "https://forms.gle/TCq3nJoaeTTR9Etf7",
+      "Retrouve ton équipe sur la Faille de l’invocateur pour le tournoi League of Legends.",
   },
   {
-    name: "VALORANT",
-    image: VALO,
-    background: VALO_BACKGROUND,
-    description:
-      "Un tournoi Valorant détente en draft de 5 joueurs. Max 12 équipes",
-    link: "https://forms.gle/ASyt2j66R74RyQiQ9",
-  },
-  {
-    name: "Super Smash Bros Ultimate",
+    name: "Super Smash Bros. Ultimate",
     image: SSBU,
     background: SSBU_BACKGROUND,
     description:
-      "Un tournoi en 1v1 où seul le meilleur combattant triomphera ! Choisissez votre personnage, enchaînez les combos et envoyez vos adversaires hors de l'arène.",
-    link: "https://forms.gle/LM5pW4jErxKxRD9f8",
+      "Choisis ton personnage, enchaîne les combos et envoie tes adversaires hors de l’arène !",
   },
   {
-    name: "FIFA 26",
-    image: FC26,
-    background: FC26_BACKGROUND,
+    name: "Counter-Strike",
+    image: CS,
+    background: CS_BACKGROUND,
     description:
-      "Compétition à 16 avec matches de poules et phases finale. Montre le meilleur de toi même sur le terrain !",
-    link: "https://forms.gle/u8tgex7kmPoprAwQA",
+      "Coordonne-toi avec ton équipe et dispute le tournoi Counter-Strike.",
+  },
+  {
+    name: "Tournoi fun",
+    description:
+      "Un tournoi pour jouer dans une ambiance détendue. Le programme sera annoncé bientôt.",
+  },
+];
+
+const animations = [
+  {
+    name: "Serveur Minecraft",
+    image: MC,
+    background: MC_BACKGROUND,
+    description:
+      "Le serveur sera ouvert pendant toute la durée de l’événement. Rejoins-le quand tu veux pour jouer librement et participer aux animations surprises qui ponctueront la LAN.",
+  },
+  {
+    name: "Jeux découverte",
+    description:
+      "Coming soon… De nouveaux jeux à découvrir seront annoncés prochainement.",
   },
 ];
 
@@ -191,18 +197,17 @@ const oldSponsors = [
             </h1>
             <p class="pb-4 xl:pb-6">Envie d'y participer ?</p>
             <a
-              href="https://www.facebook.com/events/827729983350631/"
-              target="_blank"
+              href={facebookPage}
               class="inline-block rounded-lg bg-gradient-to-r from-amber-500 to-orange-500 px-4 py-2 font-semibold text-white transition duration-150 hover:bg-blue-50 hover:text-indigo-950"
             >
-              Inscris-toi !
+              Suivre les annonces sur Facebook
             </a>
           </div>
         </div>
         <Image
           class="z-10 h-full w-full object-fill drop-shadow-lg"
           src={heroImage}
-          alt={"Illustration d'une LAN Party - Game 26"}
+          alt="Illustration d’une LAN party"
           format="webp"
         />
         {
@@ -211,7 +216,7 @@ const oldSponsors = [
               <Image
                 class="h-full w-full object-cover opacity-20"
                 src={BANNER}
-                alt="Game 26"
+                alt=""
                 quality={30}
                 format="webp"
               />
@@ -224,10 +229,10 @@ const oldSponsors = [
       class="mx-auto grid grid-rows-2 items-center gap-4 px-4 py-10 lg:container sm:grid-cols-[1fr_auto] sm:grid-rows-1"
     >
       <div class="space-y-1">
-        <h2 class="pb-2 text-4xl font-semibold">Le Game 26</h2>
+        <h2 class="pb-2 text-4xl font-semibold">Le GAME 27</h2>
         <p>
           Cette année encore, le Cercle Magellan remet le couvert et a le
-          plaisir de vous annoncer la 26ème édition de sa LAN party, le Game !
+          plaisir de vous annoncer la 27e édition de sa LAN party, le GAME !
         </p>
         <p>
           Le Game est une LAN party organisée par le Cercle Magellan, le Cercle
@@ -236,33 +241,35 @@ const oldSponsors = [
           êtes les bienvenus pour participer !
         </p>
         <p>
-          Cette édition du Game se déroulera du <strong
-            >vendredi 27 février 2026 à 18h au dimanche 1er mars 2026 à 16h</strong
-          >.
+          Les dates du GAME 27 seront annoncées prochainement.
         </p>
         <p>
           Pour plus d'informations, rendez-vous sur{" "}
           <a
-            href="https://www.facebook.com/events/827729983350631/"
+            href={facebookPage}
             class="underline duration-150 hover:translate-x-2 hover:opacity-90"
           >
-            la page facebook de l'événement.</a
+            la page Facebook du Cercle Magellan.</a
           >
         </p>
       </div>
       <Image
         class="mx-auto max-w-64"
         src={logo}
-        alt="Game 26"
+        alt="GAME 27"
         quality={30}
         format="webp"
       />
     </section>
     <section class="bg-gradient-to-br from-indigo-950 to-indigo-900 text-white">
       <div class="mx-auto px-4 py-10 lg:container">
-        <h2 id="tournois" class="pb-4 text-4xl font-semibold">
-          À vous de jouer !
+        <h2 id="tournois" class="scroll-mt-24 pb-2 text-4xl font-semibold">
+          Tournois et inscriptions
         </h2>
+        <p class="pb-4">
+          Les formulaires d’inscription seront disponibles prochainement. Suivez
+          les annonces du Cercle Magellan sur Facebook.
+        </p>
         <div class="grid items-stretch gap-4 sm:grid-cols-2">
           {
             tournois.map((tournoi) => (
@@ -271,7 +278,23 @@ const oldSponsors = [
                 image={tournoi.image}
                 background={tournoi.background}
                 description={tournoi.description}
-                link={tournoi.link}
+                link={facebookPage}
+                linkLabel="Suivre les inscriptions sur Facebook"
+              />
+            ))
+          }
+        </div>
+        <h2 class="pb-4 pt-8 text-3xl font-semibold">Et bien d’autres jeux</h2>
+        <div class="grid items-stretch gap-4 sm:grid-cols-2">
+          {
+            animations.map((animation) => (
+              <Card
+                title={animation.name}
+                image={animation.image}
+                background={animation.background}
+                description={animation.description}
+                link={facebookPage}
+                linkLabel="Suivre les annonces sur Facebook"
               />
             ))
           }
@@ -283,7 +306,7 @@ const oldSponsors = [
         class="mx-auto flex flex-col items-center justify-center gap-6 px-4 pb-6 lg:container"
       >
         <h2 id="sponsors" class="text-4xl font-semibold">
-          Merci à nos sponsors !
+          Merci à nos anciens sponsors
         </h2>
         <Sponsors sponsors={sponsors} />
 

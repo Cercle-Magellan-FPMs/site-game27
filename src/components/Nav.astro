@@ -1,7 +1,8 @@
 ---
 import { Image } from "astro:assets";
+import { facebookPage } from "../event";
 
-import logo from "@images/Logo_Game26_New_Colors.svg";
+import logo from "@images/Logo_GAME27_Colors.svg";
 
 const navItems = [
   { title: "Tournois", button: false, href: "#tournois" },
@@ -9,7 +10,7 @@ const navItems = [
   {
     title: "Infos pratiques",
     button: false,
-    href: "https://www.facebook.com/events/827729983350631/",
+    href: facebookPage,
   },
   {
     title: "À propos de nous",
@@ -17,9 +18,9 @@ const navItems = [
     href: "https://magellan.fpms.ac.be",
   },
   {
-    title: "S'incrire",
+    title: "Suivre les inscriptions",
     button: true,
-    href: "https://forms.gle/TCq3nJoaeTTR9Etf7",
+    href: facebookPage,
   },
 ];
 ---
@@ -30,10 +31,10 @@ const navItems = [
       <Image
         class="w-24"
         src={logo}
-        alt="Game 25"
+        alt="GAME 27"
         quality={30}
         format="webp"
-      /><span class="sr-only">GAME 26</span>
+      />
     </a>
     <ul class="hidden flex-wrap justify-between gap-8 lg:flex">
       {
